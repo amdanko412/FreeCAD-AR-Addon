@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Macro Begin: C:\Users\amdan\AppData\Roaming\FreeCAD\Macro\test.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
+# Macro Begin: C:\Users\amdan\AppData\Roaming\FreeCAD\Macro\export_model.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
 import FreeCAD
 import FreeCADGui
 import Mesh
@@ -27,4 +27,4 @@ else:
         Mesh.export(objs, path)
         print("Exported:", path)
 ### End command Std_Export
-# Macro End: C:\Users\amdan\AppData\Roaming\FreeCAD\Macro\test.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
+# Macro End: C:\Users\amdan\AppData\Roaming\FreeCAD\Macro\export_model.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
