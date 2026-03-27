@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+
+# Macro Begin: C:\Users\amdan\AppData\Roaming\FreeCAD\Macro\test.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
+import FreeCAD
+import FreeCADGui
+import Mesh
+
+# Gui.runCommand('Std_Export',0)
+### Begin command Std_Export
+
+
+sel = FreeCADGui.Selection.getSelectionEx()
+
+if not sel:
+    print("No object selected")
+else:
+    objs = []
+
+    for s in sel:
+        if hasattr(s.Object, "Shape"):  # ensure it's a solid/shape
+            objs.append(s.Object)
+
+    if not objs:
+        print("No valid objects to export")
+    else:
+        path = "C:/Users/amdan/Documents/Freecad/Export/Export.obj"
+        Mesh.export(objs, path)
+        print("Exported:", path)
+### End command Std_Export
+# Macro End: C:\Users\amdan\AppData\Roaming\FreeCAD\Macro\test.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
